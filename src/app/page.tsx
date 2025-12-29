@@ -88,9 +88,9 @@ export default function Home() {
                 <DiscordIcon className="w-5 h-5 text-zinc-400" />
              </div>
              <div className="text-left">
-                <div className="text-xs text-zinc-500 uppercase tracking-wider font-medium mb-0.5">Developed by</div>
+                <div className="text-xs text-zinc-500 uppercase tracking-wider font-medium mb-0.5">Remake by</div>
                 <div className="text-zinc-200 font-semibold">
-                   <a href="https://github.com/ghotality" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transition-colors">lrdd</a> & <a href="https://github.com/rxposo" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transition-colors">rxposo</a>
+                <a href="https://discord.gg/ZJwTMvkV2z" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transition-colors">AlienHub</a>
                 </div>
              </div>
           </div>
