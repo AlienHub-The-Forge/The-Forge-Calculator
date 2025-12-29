@@ -1,0 +1,371 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #1e1e1e;
+  --panel: #2b2b2b;
+  --panel-2: #2f2f31;
+  --border: #555;
+  --muted: #aaaaaa;
+  --accent: #3a8bff;
+  --text: #e0e0e0;
+  --card-shadow: rgba(0, 0, 0, 0.45);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+}
+
+/* Dark scrollbar styling for webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--panel);
+  border-radius: 6px;
+  border: 2px solid var(--bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--panel-2);
+}
+
+/* Dark scrollbar styling for Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--panel) var(--bg);
+}
+
+/* Custom silver gradient for the title */
+.silver-text {
+  background: linear-gradient(to bottom, 
+    #ffffff 0%, 
+    #d4d4d4 40%, 
+    #8a8a8a 50%, 
+    #a8a8a8 60%, 
+    #d4d4d4 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+  text-transform: uppercase;
+}
+
+/* Animation for item reaching top position */
+@keyframes topItemHighlight {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px 5px rgba(34, 197, 94, 0.4);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+.top-item-animation {
+  animation: topItemHighlight 0.8s ease-in-out;
+  will-change: transform, box-shadow;
+}
+
+/* Ore appearing in grid animation */
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(10px);
+  }
+  70% {
+    transform: scale(1.1) translateY(-2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-pop-in {
+  animation: popIn 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  will-change: transform, opacity;
+}
+
+/* Reverse zoom animation - ore starts larger and shrinks to fit */
+@keyframes reverseZoom {
+  0% {
+    opacity: 0;
+    transform: scale(1.3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-reverse-zoom {
+  animation: reverseZoom 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  will-change: transform, opacity;
+}
+
+/* Ore click feedback animation */
+@keyframes clickPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.90);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-click {
+  animation: clickPulse 0.09s ease-in-out;
+  will-change: transform;
+}
+
+/* Smooth fade in for result panels */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+  will-change: opacity;
+}
+
+/* Fade out animation for traits */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.animate-fade-out {
+  animation: fadeOut 0.4s ease-out forwards;
+}
+
+/* Stable fade in that doesn't cause position flicker */
+@keyframes fadeInStable {
+  0% {
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.animate-fade-in-stable {
+  animation: fadeInStable 0.3s ease-out forwards;
+  will-change: opacity;
+}
+
+/* Complex deletion animation */
+@keyframes deleteBorderPulse {
+  0% {
+    border-color: rgb(239 68 68);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  25% {
+    border-color: rgb(220 38 38);
+    box-shadow: 0 0 15px 3px rgba(239, 68, 68, 0.8);
+  }
+  50% {
+    border-color: rgb(239 68 68);
+    box-shadow: 0 0 20px 5px rgba(239, 68, 68, 0.9);
+  }
+  75% {
+    border-color: rgb(220 38 38);
+    box-shadow: 0 0 15px 3px rgba(239, 68, 68, 0.8);
+  }
+  100% {
+    border-color: rgb(239 68 68);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+}
+
+@keyframes deleteItemFadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    filter: brightness(1);
+  }
+  30% {
+    opacity: 0.8;
+    transform: scale(0.95) rotate(-2deg);
+    filter: brightness(0.7);
+  }
+  60% {
+    opacity: 0.4;
+    transform: scale(0.85) rotate(2deg);
+    filter: brightness(0.4);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.7) rotate(0deg);
+    filter: brightness(0.2);
+  }
+}
+
+@keyframes deleteTrashcanGrow {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    color: rgba(255, 255, 255, 0.8);
+    filter: drop-shadow(0 0 10px rgba(255, 0, 0, 1));
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.3);
+    color: rgb(239, 68, 68);
+    filter: drop-shadow(0 0 20px rgba(239, 68, 68, 1));
+  }
+  60% {
+    opacity: 0.9;
+    transform: scale(1.5);
+    color: rgb(220, 38, 38);
+    filter: drop-shadow(0 0 25px rgba(220, 38, 38, 1));
+  }
+  100% {
+    opacity: 0.7;
+    transform: scale(1.6);
+    color: rgb(185, 28, 28);
+    filter: drop-shadow(0 0 30px rgba(185, 28, 28, 0.8));
+  }
+}
+
+.slot-deleting {
+  animation: deleteBorderPulse 0.1s ease-in-out;
+  border-color: rgb(239 68 68) !important;
+  will-change: border-color, box-shadow;
+}
+
+.slot-deleting .slot-content {
+  animation: deleteItemFadeOut 0.1s ease-in-out forwards;
+  pointer-events: none;
+  will-change: transform, opacity, filter;
+}
+
+.slot-deleting .trash-icon-deleting {
+  animation: deleteTrashcanGrow 0.1s ease-in-out forwards;
+  z-index: 30;
+  pointer-events: none;
+  will-change: transform, opacity, filter;
+}
+
+/* Mobile ore selector: hide internal button text */
+.mobile-ore-selector button span {
+  display: none;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 1023px) {
+  /* Prevent layout shift on mobile */
+  .mobile-stable-container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Ensure smooth scrolling on mobile */
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Prevent horizontal scroll */
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* Modal animation */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-modal-in {
+  animation: modalFadeIn 0.2s ease-out forwards;
+  will-change: transform, opacity;
+}
+
+/* Corner decorations for game-style frames */
+.corner-decoration {
+  position: relative;
+}
+
+/* Corner decoration using absolute positioned elements - game-style corner cuts */
+.corner-decor-top-left,
+.corner-decor-top-right,
+.corner-decor-bottom-left,
+.corner-decor-bottom-right {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.corner-decor-top-left {
+  top: -2px;
+  left: -2px;
+  border-top: 4px solid;
+  border-left: 4px solid;
+  border-color: inherit;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.corner-decor-top-right {
+  top: -2px;
+  right: -2px;
+  border-top: 4px solid;
+  border-right: 4px solid;
+  border-color: inherit;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+.corner-decor-bottom-left {
+  bottom: -2px;
+  left: -2px;
+  border-bottom: 4px solid;
+  border-left: 4px solid;
+  border-color: inherit;
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+}
+
+.corner-decor-bottom-right {
+  bottom: -2px;
+  right: -2px;
+  border-bottom: 4px solid;
+  border-right: 4px solid;
+  border-color: inherit;
+  clip-path: polygon(0 100%, 100% 100%, 100% 0);
+}

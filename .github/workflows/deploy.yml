@@ -1,0 +1,34 @@
+name: Build and Deploy to Square Cloud
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+       - uses: actions/checkout@v4
+       - uses: actions/setup-node@v4
+         with:
+           node-version: 22
+ 
+       - name: Install dependencies
+         run: npm install
+ 
+       - name: Build website
+         run: npm run build && chmod -R 777 .next next.config.ts package.json
+         env:
+          NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
+ 
+       - name: Add website to zip
+         run: zip -r project.zip package.json .next next.config.ts public -x ".next/cache/*"
+ 
+       - name: Deploy on Square Cloud
+         uses: squarecloudofc/github-action@v2
+         with:
+           command: commit --file project.zip ${{ secrets.SQUARECLOUD_APP_ID }}
+           token: '${{ secrets.SQUARECLOUD_TOKEN }}'
