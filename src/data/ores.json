@@ -331,5 +331,173 @@
         "multiplier": 0.0,
         "traitType": null,
         "traits": []
+    },
+    "Tungsten": {
+        "rarity": "Common",
+        "multiplier": 2.6,
+        "traitType": null,
+        "traits": []
+    },
+    "Sulfur": {
+        "rarity": "Uncommon",
+        "multiplier": 2.75,
+        "traitType": null,
+        "traits": []
+    },
+    "Pumice": {
+        "rarity": "Rare",
+        "multiplier": 2.9,
+        "traitType": null,
+        "traits": []
+    },
+    "Graphite": {
+        "rarity": "Rare",
+        "multiplier": 3.1,
+        "traitType": null,
+        "traits": []
+    },
+    "Aetherit": {
+        "rarity": "Rare",
+        "multiplier": 3.4,
+        "traitType": null,
+        "traits": []
+    },
+    "Scheelite": {
+        "rarity": "Rare",
+        "multiplier": 3.7,
+        "traitType": null,
+        "traits": []
+    },
+    "Larimar": {
+        "rarity": "Epic",
+        "multiplier": 4.1,
+        "traitType": null,
+        "traits": []
+    },
+    "Neurotite": {
+        "rarity": "Epic",
+        "multiplier": 4.3,
+        "traitType": null,
+        "traits": []
+    },
+    "Frost Fossil": {
+        "rarity": "Epic",
+        "multiplier": 4.5,
+        "traitType": null,
+        "traits": []
+    },
+    "Tide Carve": {
+        "rarity": "Epic",
+        "multiplier": 4.7,
+        "traitType": null,
+        "traits": []
+    },
+    "Velchire": {
+        "rarity": "Legendary",
+        "multiplier": 5.5,
+        "traitType": null,
+        "traits": []
+    },
+    "Snowite": {
+        "rarity": "Legendary",
+        "multiplier": 8,
+        "traitType": null,
+        "traits": []
+    },
+    "Iceite": {
+        "rarity": "Mythical",
+        "multiplier": 10.5,
+        "traitType": null,
+        "traits": []
+    },
+    "Mistvein": {
+        "rarity": "Rare",
+        "multiplier": 7.2,
+        "traitType": null,
+        "traits": []
+    },
+    "Lgarite": {
+        "rarity": "Rare",
+        "multiplier": 7.5,
+        "traitType": null,
+        "traits": []
+    },
+    "Voidfractal": {
+        "rarity": "Rare",
+        "multiplier": 8,
+        "traitType": null,
+        "traits": []
+    },
+    "Moltenfrost": {
+        "rarity": "Epic",
+        "multiplier": 8.3,
+        "traitType": null,
+        "traits": []
+    },
+    "Crimsonite": {
+        "rarity": "Epic",
+        "multiplier": 8.5,
+        "traitType": null,
+        "traits": []
+    },
+    "Malachite": {
+        "rarity": "Epic",
+        "multiplier": 8.8,
+        "traitType": null,
+        "traits": []
+    },
+    "Aqujade": {
+        "rarity": "Epic",
+        "multiplier": 9,
+        "traitType": null,
+        "traits": []
+    },
+    "Cryptex": {
+        "rarity": "Epic",
+        "multiplier": 9.3,
+        "traitType": null,
+        "traits": []
+    },
+    "Galestor": {
+        "rarity": "Epic",
+        "multiplier": 9.5,
+        "traitType": null,
+        "traits": []
+    },
+    "Sanctis": {
+        "rarity": "Legendary",
+        "multiplier": 6,
+        "traitType": null,
+        "traits": []
+    },
+    "Voidstar": {
+        "rarity": "Legendary",
+        "multiplier": 10,
+        "traitType": null,
+        "traits": []
+    },
+    "Etherealite": {
+        "rarity": "Mythical",
+        "multiplier": 11.1,
+        "traitType": null,
+        "traits": []
+    },
+    "Suryafal": {
+        "rarity": "Relic",
+        "multiplier": 15,
+        "traitType": null,
+        "traits": []
+    },
+    "Heavenite": {
+        "rarity": "Divine",
+        "multiplier": 20,
+        "traitType": null,
+        "traits": []
+    },
+    "Gargantuan": {
+        "rarity": "Divine",
+        "multiplier": 25,
+        "traitType": null,
+        "traits": []
     }
 }
