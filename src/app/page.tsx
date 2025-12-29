@@ -119,7 +119,7 @@ export default function Home() {
              </div>
              <div className="text-left">
                 <div className="text-xs text-zinc-500 uppercase tracking-wider font-medium mb-0.5">Contributor</div>
-                <a href="https://github.com/Nash29197" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">三眼怪</a> & <a href="https://github.com/otakusonline" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">otakusonline</a>
+                <a href="https://github.com/Nash29197" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">三眼怪</a> & <a href="https://github.com/Nickyangtpe" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">BriefBassoon117</a>
              </div>
           </div>
         </div>
