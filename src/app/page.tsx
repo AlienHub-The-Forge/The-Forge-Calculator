@@ -104,7 +104,7 @@ export default function Home() {
              </div>
              <div className="text-left">
                 <div className="text-xs text-zinc-500 uppercase tracking-wider font-medium mb-0.5">Support the Project</div>
-                <a href="https://github.com/ghotality/theforge-calculator" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zinc-200 font-semibold hover:text-yellow-400 transition-colors">
+                <a href="https://github.com/AlienHub-The-Forge/The-Forge-Calculator" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zinc-200 font-semibold hover:text-yellow-400 transition-colors">
                    <StarIcon className="w-4 h-4 text-yellow-500" /> Star on GitHub
                 </a>
              </div>
@@ -118,16 +118,11 @@ export default function Home() {
                 <ForkIcon className="w-5 h-5 text-zinc-400" />
              </div>
              <div className="text-left">
-                <div className="text-xs text-zinc-500 uppercase tracking-wider font-medium mb-0.5">Forked from</div>
-                <a href="https://github.com/KamrynH-CS/theforge-calculator" target="_blank" rel="noopener noreferrer" className="text-zinc-200 font-semibold hover:text-blue-400 transition-colors text-sm">
-                   KamrynH-CS/theforge-calculator
-                </a>
-                <div className="text-xs text-zinc-600 mt-0.5">by otakusonline</div>
+                <div className="text-xs text-zinc-500 uppercase tracking-wider font-medium mb-0.5">Contributor</div>
+                <a href="https://github.com/Nash29197" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">三眼怪</a> & <a href="https://github.com/otakusonline" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">otakusonline</a>
              </div>
           </div>
-
         </div>
-
       </main>
     </div>
   );
