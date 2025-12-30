@@ -260,7 +260,12 @@
         "traitType": "Armor",
         "traits": [
             {
-                "description": "to Burn Enemy when Damage is Taken.",
+                "description": "Deals +20% of weapon damage as fire per second for 2 seconds. Chance on attack",
+                "maxStat": 15,
+                "type": "Weapon"
+            },
+            {
+                "description": "Deals +20% of weapon damage as fire per second for 2 seconds. Chance when hit",
                 "maxStat": 25,
                 "type": "Armor"
             }
@@ -353,14 +358,28 @@
     "Graphite": {
         "rarity": "Rare",
         "multiplier": 3.1,
-        "traitType": null,
-        "traits": []
+        "traitType": "Armor",
+        "traits": [
+            {
+                "description": "Health",
+                "maxStat": 5
+            },
+            {
+                "description": "to reduce incoming damage by 12%",
+                "maxStat": 20
+            }
+        ]
     },
     "Aetherit": {
         "rarity": "Rare",
         "multiplier": 3.4,
-        "traitType": null,
-        "traits": []
+        "traitType": "Armor",
+        "traits": [
+            {
+                "description": "Bonus Movement Speed",
+                "maxStat": 5
+            }
+        ]
     },
     "Scheelite": {
         "rarity": "Rare",
@@ -383,8 +402,17 @@
     "Frost Fossil": {
         "rarity": "Epic",
         "multiplier": 4.5,
-        "traitType": null,
-        "traits": []
+        "traitType": "All",
+        "traits": [
+                {
+                    "description": "Weapon Damage",
+                    "maxStat": 17.5
+                },
+                {
+                    "description": "Bonus Movement Speed",
+                    "maxStat": -5
+                }
+        ]
     },
     "Tide Carve": {
         "rarity": "Epic",
@@ -395,20 +423,47 @@
     "Velchire": {
         "rarity": "Legendary",
         "multiplier": 5.5,
-        "traitType": null,
-        "traits": []
+        "traitType": "Armor",
+        "traits": [
+            {
+                "description": "Bonus Movement Speed",
+                "maxStat": 20
+            }
+        ]
     },
     "Snowite": {
         "rarity": "Legendary",
         "multiplier": 8,
-        "traitType": null,
-        "traits": []
+        "traitType": "Weapon",
+        "traits": [
+            {
+                "description": "Attack speed and movement speed slow for 3 seconds",
+                "maxStat": 15
+            },
+            {
+                "description": "chance on hit",
+                "maxStat": 30
+            }
+        ]
     },
     "Iceite": {
         "rarity": "Mythical",
         "multiplier": 10.5,
-        "traitType": null,
-        "traits": []
+        "traitType": "Weapon",
+        "traits": [
+            {
+                "description": "Freeze enemies for seconds",
+                "maxStat": 2
+            },
+            {
+                "description": "chance on hit",
+                "maxStat": 25
+            },
+            {
+                "description": "cooldown",
+                "maxStat": 12
+            }
+        ]
     },
     "Mistvein": {
         "rarity": "Rare",
@@ -437,14 +492,26 @@
     "Crimsonite": {
         "rarity": "Epic",
         "multiplier": 8.5,
-        "traitType": null,
-        "traits": []
+        "traitType": "Weapon",
+        "traits": [
+            {
+                "description": "Physical Damage",
+                "maxStat": 20,
+                "type": "Weapon"
+            }
+        ]
     },
     "Malachite": {
         "rarity": "Epic",
         "multiplier": 8.8,
-        "traitType": null,
-        "traits": []
+        "traitType": "Weapon",
+        "traits": [
+            {
+                "description": "Deals +10% of weapon damage as poison per second for 3 seconds. Chance on hit",
+                "maxStat": 33,
+                "type": "Weapon"
+            }
+        ]
     },
     "Aqujade": {
         "rarity": "Epic",
@@ -473,14 +540,33 @@
     "Voidstar": {
         "rarity": "Legendary",
         "multiplier": 10,
-        "traitType": null,
-        "traits": []
+        "traitType": "Weapon",
+        "traits": [
+            {
+                "description": "Crit Chance",
+                "maxStat": 33
+            },
+            {
+                "description": "Crit Damage",
+                "maxStat": 15
+            },
+            {
+                "description": "Vitality",
+                "maxStat": -15
+            }
+        ]
     },
     "Etherealite": {
         "rarity": "Mythical",
         "multiplier": 11.1,
-        "traitType": null,
-        "traits": []
+        "traitType": "Armor",
+        "traits": [
+            {
+                "description": "Vitality",
+                "maxStat": 35,
+                "type": "Armor"
+            }
+        ]
     },
     "Suryafal": {
         "rarity": "Relic",
@@ -497,7 +583,21 @@
     "Gargantuan": {
         "rarity": "Divine",
         "multiplier": 25,
-        "traitType": null,
-        "traits": []
+        "traitType": "Weapon",
+        "traits": [
+            {
+                "description": "Chance for 50% weapon damage AOE explosion",
+                "maxStat": 35,
+                "type": "Weapon"
+            },
+            {
+                "description": "Burn Damage on Weapons with",
+                "maxStat": 20
+            },
+            {
+                "description": "chance",
+                "maxStat": 30
+            }
+        ]
     }
 }
